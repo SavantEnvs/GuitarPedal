@@ -1,0 +1,9 @@
+project: savantenvs/GuitarPedal
+target: fuzz_midi_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_midi_parser/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzz_midi_parser
+    libfuzzer: true
+    timeout: 30

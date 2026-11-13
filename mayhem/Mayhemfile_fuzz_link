@@ -1,0 +1,9 @@
+project: savantenvs/GuitarPedal
+target: fuzz_link
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_link/testsuite
+cmds:
+  - cmd: /mayhem/build/fuzz_link
+    libfuzzer: true
+    timeout: 30
